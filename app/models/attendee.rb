@@ -1,4 +1,16 @@
 class Attendee
+  attr_accessor :name, :age, :ticket, :events
+  
+  @@all = []
+  
+  def initialize(name, age)
+    @name = name
+    @age = age 
+    @@all << self 
+  end 
+  
+  
+  
 end
 
 # Attendee.all

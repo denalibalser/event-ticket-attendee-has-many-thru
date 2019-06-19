@@ -1,5 +1,25 @@
 class Event
+  attr_accessor :name, :ticket_price :attendee, :ticket
+  
+  @@all = []
+  
+  def initialize(name, ticket_price)
+    @name = name
+    @ticket_price = ticket_price
+    @@all << self 
+  end 
+  
+  def self.all 
+    @@all 
+  end 
+  
+  def attendees  #instance  method that iterates through the array of Attendee instances and returns 
+    Attendee.all.map do |attendee|
+      
+  end
+  
 end
+
 
 # Event.all
   # Returns an array of all Events
