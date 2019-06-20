@@ -1,5 +1,5 @@
 class Attendee
-  attr_accessor :name, :age, :ticket, :events
+  attr_accessor :name, :age, :ticket, :event
   
   @@all = []
   
@@ -9,7 +9,15 @@ class Attendee
     @@all << self 
   end 
   
+  def self.all 
+    @@all 
+  end 
   
+  def events 
+    events.map do |event|
+      event.self 
+    end 
+  end #instance method that is iterating through the 
   
 end
 

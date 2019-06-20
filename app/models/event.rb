@@ -13,10 +13,15 @@ class Event
     @@all 
   end 
   
-  def attendees  #instance  method that iterates through the array of Attendee instances and returns 
+  def attendees  
     Attendee.all.map do |attendee|
-      
-  end
+      attendee.event == self 
+    end 
+  end  #instance  method that iterates through the array of Attendee instances and returns all the attendee instance's events that match the instance of the current Event 
+  
+  def average_age
+    Attendee.all.
+  end 
   
 end
 
