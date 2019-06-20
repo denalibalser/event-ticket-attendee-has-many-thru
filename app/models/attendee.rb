@@ -24,10 +24,15 @@ class Attendee
   end 
   
   def money_spent
-    events.ticket_price
+    self.
   end
   
 end
+
+`Attendee#buy_ticket`
+  + Accepts an `Event` instance as an argument and makes it so that, when `#events` is called on this `Attendee` instance, the passed-in `Event` will appear in the resulting array.
++ `Attendee#money_spent`
+  + Returns the dollar amount this `Attendee` has spent on `Tickets` for `Events`
 
 # Attendee.all
   # Returns an array of all Attendees
