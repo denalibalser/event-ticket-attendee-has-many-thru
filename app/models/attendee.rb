@@ -6,6 +6,7 @@ class Attendee
   def initialize(name, age)
     @name = name
     @age = age 
+    @event = event
     @@all << self 
   end 
   

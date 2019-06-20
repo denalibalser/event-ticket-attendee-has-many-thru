@@ -17,7 +17,7 @@ class Event
     Attendee.all.select do |attendee|
       attendee.event == self 
     end 
-  end  #instance  method that iterates through the array of Attendee instances and adds the event instance to an array if the block returns 'true' 
+  end  
   
   def sell_ticket(attendee)
     Ticket.new(self, attendee)
@@ -28,7 +28,6 @@ class Event
   
   
   def average_age
-    Attendee.age   
   end 
   
 end
