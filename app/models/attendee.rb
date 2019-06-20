@@ -19,6 +19,10 @@ class Attendee
     end 
   end #instance method that is iterating through the array of Event instances and adds the instance of the event to an array if the block returns 'true'
   
+  def buy_ticket(event)
+    Ticket.new(event, self)
+  end 
+  
   def money_spent
     events.ticket_price
   end

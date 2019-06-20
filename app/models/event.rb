@@ -20,7 +20,7 @@ class Event
   end  #instance  method that iterates through the array of Attendee instances and adds the event instance to an array if the block returns 'true' 
   
   def sell_ticket(attendee)
-    Attendee.new(name, age, self)
+    Ticket.new(self, attendee)
   end
   
   def money_made
