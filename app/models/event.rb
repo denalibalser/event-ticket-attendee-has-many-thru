@@ -14,10 +14,11 @@ class Event
   end 
   
   def attendees  
-    Attendee.all.map do |attendee|
+    Attendee.all.select do |attendee|
       attendee.event == self 
     end 
-  end  #instance  method that iterates through the array of Attendee instances and returns all the attendee instance's events that match the instance of the current Event 
+  end  #instance  method that iterates through the array of Attendee instances and adds the event instance to an array if the block returns 'true' 
+  
   
   def average_age
     Attendee.age   

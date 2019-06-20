@@ -14,10 +14,10 @@ class Attendee
   end 
   
   def events 
-    Event.all.map do |event|
+    Event.all.select do |event|
       event.attendee == self 
     end 
-  end #instance method that is iterating through the array of Event instances and returns the event that is equal to the attendee  instance 
+  end #instance method that is iterating through the array of Event instances and adds the instance of the event to an array if the block returns 'true'
   
   def money_spent
     events.ticket_price
