@@ -1,5 +1,5 @@
 class Event
-  attr_accessor :name, :ticket_price :attendee, :ticket
+  attr_accessor :name, :ticket_price, :attendee, :ticket
   
   @@all = []
   
@@ -32,13 +32,6 @@ class Event
   end 
   
 end
-
-`Event#sell_ticket`
-  + Accepts an `Attendee` instance as an argument and makes it so that, when `#attendees` is called on this `Event` instance, that `Attendee` instance will show up in the array.
-+ `Event#money_made`
-  + Returns an integer that is the product of the number of `Ticket`s sold for this event and the price of the `Ticket`.
-+ `Event#average_age`
-  + Returns the average age of all the `Attendee`s that will be at the `Event`
 
 # Event.all
   # Returns an array of all Events
