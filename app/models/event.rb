@@ -20,7 +20,7 @@ class Event
   end  #instance  method that iterates through the array of Attendee instances and returns all the attendee instance's events that match the instance of the current Event 
   
   def average_age
-    Attendee.all.
+    Attendee.age   
   end 
   
 end
